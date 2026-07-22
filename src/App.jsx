@@ -96,8 +96,8 @@ function App() {
           onClick={() => scrollToSection('root')}
           style={{ display: 'flex', alignItems: 'center', gap: '8px', cursor: 'none' }}
         >
-          {/* Logo Icon Ring */}
-          <svg width="24" height="24" viewBox="0 0 100 100" style={{ overflow: 'visible' }}>
+          {/* Green Ring Logo SVG */}
+          <svg width="24" height="24" viewBox="0 0 100 100">
             <circle
               cx="50"
               cy="50"
@@ -105,7 +105,6 @@ function App() {
               stroke="var(--primary)"
               strokeWidth="15"
               fill="none"
-              style={{ filter: 'drop-shadow(0 0 8px rgba(0, 255, 102, 0.8))' }}
             />
           </svg>
           <span

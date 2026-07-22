@@ -29,8 +29,8 @@ export default function Footer() {
         {/* Logo and Tagline Column */}
         <div style={{ display: 'flex', flexDirection: 'column', gap: '20px' }}>
           <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
-            {/* The Green Ring Logo SVG */}
-            <svg width="32" height="32" viewBox="0 0 100 100" style={{ overflow: 'visible' }}>
+            {/* Green Ring Logo SVG */}
+            <svg width="32" height="32" viewBox="0 0 100 100">
               <circle
                 cx="50"
                 cy="50"
@@ -38,7 +38,6 @@ export default function Footer() {
                 stroke="var(--primary)"
                 strokeWidth="12"
                 fill="none"
-                style={{ filter: 'drop-shadow(0 0 10px rgba(0, 255, 102, 0.75))' }}
               />
             </svg>
             <span
