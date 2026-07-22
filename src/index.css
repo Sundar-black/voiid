@@ -481,3 +481,39 @@ section {
     grid-template-columns: 1fr;
   }
 }
+
+/* Restore Standard Browser Cursors Globally */
+* {
+  cursor: auto !important;
+}
+
+a, 
+button, 
+input[type="button"], 
+input[type="submit"], 
+select, 
+[role="button"], 
+[onClick],
+.interactive,
+.magnetic-btn {
+  cursor: pointer !important;
+}
+
+/* Ensure text fields get correct text selection cursor */
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="search"],
+input[type="number"],
+input:not([type="button"]):not([type="submit"]),
+textarea {
+  cursor: text !important;
+}
+
+/* Let nested children inside clickable items inherit pointer cursor */
+a *, 
+button *, 
+[role="button"] *, 
+[onClick] * {
+  cursor: pointer !important;
+}

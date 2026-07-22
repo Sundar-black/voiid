@@ -2,7 +2,6 @@ import { useEffect, useState } from 'react';
 import Lenis from 'lenis';
 
 // Import Components
-import CustomCursor from './components/CustomCursor';
 import Hero from './components/Hero';
 import About from './components/About';
 import Services from './components/Services';
@@ -57,8 +56,7 @@ function App() {
 
   return (
     <>
-      {/* Premium Cursor Follower */}
-      <CustomCursor />
+
 
       {/* Screen noise overlay */}
       <div className="noise-overlay" />
@@ -94,7 +92,7 @@ function App() {
         {/* Logo */}
         <div
           onClick={() => scrollToSection('root')}
-          style={{ display: 'flex', alignItems: 'center', gap: '8px', cursor: 'none' }}
+          style={{ display: 'flex', alignItems: 'center', gap: '8px' }}
         >
           {/* Green Ring Logo SVG */}
           <svg width="24" height="24" viewBox="0 0 100 100">
@@ -140,7 +138,6 @@ function App() {
                 fontFamily: 'var(--font-sans)',
                 fontSize: '0.9rem',
                 fontWeight: 500,
-                cursor: 'none',
                 transition: 'color 0.25s ease',
               }}
               onMouseEnter={(e) => (e.target.style.color = 'var(--primary)')}
@@ -160,7 +157,6 @@ function App() {
               padding: '10px 20px',
               fontSize: '0.85rem',
               border: 'none',
-              cursor: 'none',
             }}
           >
             Start Project
