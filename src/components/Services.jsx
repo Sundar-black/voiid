@@ -6,7 +6,6 @@ import {
   Search,
   Megaphone,
   Database,
-  Layout,
   Terminal,
   ArrowUpRight,
   X,
@@ -332,30 +331,7 @@ export default function Services() {
         desc: 'Ultra-low delays scale platform throughput to handle over 10,000 parallel user actions.'
       }
     },
-    {
-      title: 'UI/UX Design',
-      icon: Layout,
-      items: [
-        'High-fidelity Figma mockups',
-        'Interactive prototypes',
-        'Wireframe outlines',
-        'Brand Identity guidelines',
-        'Typography & styling guides',
-      ],
-      overview: 'Conversion-optimized user interface drafts and interactive user journey wireframes, styled on high-contrast neon-dark palettes.',
-      capabilities: [
-        'Detailed visual mockups and layout drafts designed inside Figma.',
-        'Interactive prototype user flows mimicking the complete production UI.',
-        'Aesthetic dark mode and glassmorphism styling frameworks.',
-        'Component style systems defining typography ranges and color scales.',
-        'Responsive layout scaling briefs for mobile, tablet, and web handoffs.'
-      ],
-      impact: {
-        metric: '70%',
-        label: 'Engagement Score Rise',
-        desc: 'Visual indicators streamline checkouts, dramatically lowering cart abandonments.'
-      }
-    },
+
     {
       title: 'Software Development',
       icon: Terminal,
@@ -416,13 +392,7 @@ export default function Services() {
       </div>
 
       {/* Grid container */}
-      <div
-        style={{
-          display: 'grid',
-          gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',
-          gap: '30px',
-        }}
-      >
+      <div className="services-grid">
         {servicesList.map((srv, index) => (
           <motion.div
             key={index}
