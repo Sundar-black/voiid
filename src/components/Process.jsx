@@ -211,14 +211,19 @@ export default function Process() {
 
       {/* Service selection switcher tabs */}
       <div
+        className="process-tabs-container"
         style={{
           display: 'flex',
           justifyContent: 'center',
           gap: '12px',
-          flexWrap: 'wrap',
+          flexWrap: 'nowrap',
+          overflowX: 'auto',
+          paddingBottom: '8px',
           marginBottom: '50px',
-          maxWidth: '850px',
+          maxWidth: '100%',
+          width: 'max-content',
           margin: '0 auto 50px',
+          WebkitOverflowScrolling: 'touch',
         }}
       >
         {[
@@ -248,7 +253,8 @@ export default function Process() {
                 display: 'flex',
                 alignItems: 'center',
                 gap: '8px',
-                cursor: 'none',
+                whiteSpace: 'nowrap',
+                flexShrink: 0,
               }}
             >
               <BtnIcon size={16} />

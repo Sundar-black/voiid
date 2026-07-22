@@ -517,3 +517,12 @@ button *,
 [onClick] * {
   cursor: pointer !important;
 }
+
+/* Hide scrollbar for process tabs container while keeping scroll function */
+.process-tabs-container::-webkit-scrollbar {
+  display: none;
+}
+.process-tabs-container {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}

@@ -228,7 +228,7 @@ export default function Hero({ onStartProject, onViewPortfolio }) {
                     fontFamily: 'monospace',
                   }}
                 >
-                  voiid_dashboard.js
+                  /VOIID_dashboard.js
                 </span>
               </div>
               <div
@@ -383,7 +383,7 @@ export default function Hero({ onStartProject, onViewPortfolio }) {
                     color: '#fff',
                   }}
                 >
-                  voidd
+                  VOIID
                 </span>
                 <p
                   style={{
