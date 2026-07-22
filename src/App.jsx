@@ -102,7 +102,7 @@ function App() {
               cx="50"
               cy="50"
               r="35"
-              stroke="var(--primary)"
+              stroke="#4caf50"
               strokeWidth="15"
               fill="none"
             />
