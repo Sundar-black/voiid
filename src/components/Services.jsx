@@ -484,6 +484,7 @@ export default function Services() {
 
               {/* Scrollable Content Container */}
               <div
+                data-lenis-prevent
                 style={{
                   width: '100%',
                   height: '100%',

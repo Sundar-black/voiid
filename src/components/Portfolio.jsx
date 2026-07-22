@@ -1071,6 +1071,7 @@ export default function Portfolio() {
 
               {/* Scrollable Content Container */}
               <div
+                data-lenis-prevent
                 style={{
                   width: '100%',
                   height: '100%',
@@ -1269,29 +1270,7 @@ export default function Portfolio() {
                   </div>
                 </motion.div>
 
-                {/* Mock Image Gallery Grid */}
-                <motion.div
-                  initial={{ opacity: 0, y: 35 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: 0.45, duration: 0.5, ease: 'easeOut' }}
-                >
-                  <h4 style={{ fontFamily: 'var(--font-heading)', color: '#fff', fontSize: '1.2rem', marginBottom: '18px', fontWeight: 500 }}>System Visualizations</h4>
-                  <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '20px' }}>
-                    {activeProject.gallery.map((img, i) => (
-                      <div
-                        key={i}
-                        style={{
-                          height: '180px',
-                          borderRadius: '16px',
-                          backgroundImage: `url(${img})`,
-                          backgroundSize: 'cover',
-                          backgroundPosition: 'top',
-                          border: '1px solid rgba(255,255,255,0.05)',
-                        }}
-                      />
-                    ))}
-                  </div>
-                </motion.div>
+
               </motion.div>
             </div>
           </motion.div>
