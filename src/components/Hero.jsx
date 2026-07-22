@@ -383,7 +383,7 @@ export default function Hero({ onStartProject, onViewPortfolio }) {
                     color: '#fff',
                   }}
                 >
-                  VOIID App
+                  voidd
                 </span>
                 <p
                   style={{
@@ -490,7 +490,7 @@ export default function Hero({ onStartProject, onViewPortfolio }) {
                 fontFamily: 'var(--font-heading)',
               }}
             >
-              +382.4%
+              100%
             </div>
             <div
               style={{
