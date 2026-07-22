@@ -953,7 +953,7 @@ export default function Portfolio() {
       />
 
       <div className="section-header">
-        <span className="section-tag">Case Studies</span>
+        <span className="section-tag">Portfolio</span>
         <h2 className="section-title">Engineered to Perform</h2>
         <p className="section-subtitle">
           Explore a curated selection of our digital builds, search indexing optimizations, and lead acquisition campaigns.
