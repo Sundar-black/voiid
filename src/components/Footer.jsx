@@ -209,11 +209,11 @@ export default function Footer() {
             onSubmit={(e) => e.preventDefault()}
             style={{
               display: 'flex',
-              gap: '8px',
-              borderRadius: '12px',
+              gap: '10px',
+              borderRadius: '16px',
               background: 'rgba(255,255,255,0.01)',
               border: '1px solid var(--glass-border)',
-              padding: '4px',
+              padding: '8px',
             }}
           >
             <input
@@ -225,10 +225,10 @@ export default function Footer() {
                 border: 'none',
                 color: '#fff',
                 fontSize: '0.85rem',
-                paddingLeft: '12px',
+                paddingLeft: '16px',
+                paddingRight: '12px',
                 outline: 'none',
                 flex: 1,
-                cursor: 'none',
               }}
             />
             <button
@@ -237,12 +237,11 @@ export default function Footer() {
                 background: 'var(--primary)',
                 color: '#050505',
                 border: 'none',
-                borderRadius: '8px',
-                padding: '8px 16px',
+                borderRadius: '10px',
+                padding: '12px 24px',
                 fontSize: '0.85rem',
                 fontFamily: 'var(--font-heading)',
                 fontWeight: 600,
-                cursor: 'none',
               }}
             >
               Subscribe
