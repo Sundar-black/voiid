@@ -114,7 +114,7 @@ export default function WhyChooseUs() {
                 display: 'flex',
                 alignItems: 'center',
                 justifyContent: 'center',
-                color: '#050505',
+                color: '#fff',
                 fontSize: '0.95rem',
                 fontFamily: 'var(--font-heading)',
                 fontWeight: 700,
