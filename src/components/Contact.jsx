@@ -1,24 +1,49 @@
 import { useState } from 'react';
 import { Mail, Phone, MapPin, Send, CheckCircle2 } from 'lucide-react';
+import { WEB3FORMS_ACCESS_KEY } from '../config';
 
 export default function Contact() {
   const [form, setForm] = useState({ name: '', email: '', message: '' });
   const [loading, setLoading] = useState(false);
   const [success, setSuccess] = useState(false);
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     if (!form.name || !form.email || !form.message) return;
     setLoading(true);
 
-    // Mock network transmission latency
-    setTimeout(() => {
+    try {
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify({
+          access_key: WEB3FORMS_ACCESS_KEY,
+          name: form.name,
+          email: form.email,
+          message: form.message,
+          subject: `New Project Inquiry from ${form.name}`,
+        }),
+      });
+
+      const data = await response.json();
+      if (data.success) {
+        setSuccess(true);
+        setForm({ name: '', email: '', message: '' });
+        // Reset success state after a few seconds
+        setTimeout(() => setSuccess(false), 5000);
+      } else {
+        console.error("Web3Forms submission failed:", data);
+        alert(data.message || "Failed to submit form. Please verify the access key.");
+      }
+    } catch (error) {
+      console.error("Error submitting form:", error);
+      alert("An unexpected error occurred. Please try again later.");
+    } finally {
       setLoading(false);
-      setSuccess(true);
-      setForm({ name: '', email: '', message: '' });
-      // Reset success state after a few seconds
-      setTimeout(() => setSuccess(false), 5000);
-    }, 1800);
+    }
   };
 
   return (

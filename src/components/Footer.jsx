@@ -1,8 +1,52 @@
+import { useState } from 'react';
 import { ArrowUp } from 'lucide-react';
+import { WEB3FORMS_ACCESS_KEY } from '../config';
 
 export default function Footer() {
+  const [email, setEmail] = useState('');
+  const [loading, setLoading] = useState(false);
+  const [success, setSuccess] = useState(false);
+
   const handleScrollTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
+  const handleSubscribe = async (e) => {
+    e.preventDefault();
+    if (!email) return;
+    setLoading(true);
+
+    try {
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify({
+          access_key: WEB3FORMS_ACCESS_KEY,
+          email: email,
+          subject: `Newsletter Subscription Request`,
+          message: `Please subscribe this email address to the newsletter:\n\nEmail: ${email}`,
+        }),
+      });
+
+      const data = await response.json();
+      if (data.success) {
+        setSuccess(true);
+        setEmail('');
+        // Reset success state after a few seconds
+        setTimeout(() => setSuccess(false), 5000);
+      } else {
+        console.error("Web3Forms subscription failed:", data);
+        alert(data.message || "Failed to subscribe email. Please verify the access key.");
+      }
+    } catch (error) {
+      console.error("Error subscribing email:", error);
+      alert("An unexpected error occurred. Please try again later.");
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
@@ -206,7 +250,7 @@ export default function Footer() {
           </p>
 
           <form
-            onSubmit={(e) => e.preventDefault()}
+            onSubmit={handleSubscribe}
             style={{
               display: 'flex',
               gap: '10px',
@@ -220,6 +264,9 @@ export default function Footer() {
               type="email"
               placeholder="Enter your email"
               required
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              disabled={loading || success}
               style={{
                 background: 'transparent',
                 border: 'none',
@@ -233,18 +280,22 @@ export default function Footer() {
             />
             <button
               type="submit"
+              disabled={loading || success}
               style={{
-                background: 'var(--primary)',
-                color: '#050505',
+                background: success ? '#247B1B' : 'var(--primary)',
+                color: success ? '#fff' : '#050505',
                 border: 'none',
                 borderRadius: '10px',
                 padding: '12px 24px',
                 fontSize: '0.85rem',
                 fontFamily: 'var(--font-heading)',
                 fontWeight: 600,
+                cursor: 'none',
+                opacity: loading ? 0.8 : 1,
+                transition: 'background-color 0.3s ease, color 0.3s ease',
               }}
             >
-              Subscribe
+              {loading ? 'Subscribing...' : success ? 'Subscribed!' : 'Subscribe'}
             </button>
           </form>
         </div>
