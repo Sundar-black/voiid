@@ -210,22 +210,7 @@ export default function Process() {
       </div>
 
       {/* Service selection switcher tabs */}
-      <div
-        className="process-tabs-container"
-        style={{
-          display: 'flex',
-          justifyContent: 'center',
-          gap: '12px',
-          flexWrap: 'nowrap',
-          overflowX: 'auto',
-          paddingBottom: '8px',
-          marginBottom: '50px',
-          maxWidth: '100%',
-          width: 'max-content',
-          margin: '0 auto 50px',
-          WebkitOverflowScrolling: 'touch',
-        }}
-      >
+      <div className="process-tabs-container">
         {[
           { key: 'website', label: 'Website Development', icon: Globe },
           { key: 'seo', label: 'SEO Optimization', icon: Search },
@@ -375,7 +360,7 @@ export default function Process() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -15 }}
             transition={{ duration: 0.3 }}
-            className="glass-panel"
+            className="process-desc-card glass-panel"
             style={{
               padding: '40px',
               borderRadius: '24px',
@@ -416,7 +401,7 @@ export default function Process() {
             </div>
 
             {/* Deliverables list */}
-            <div style={{ borderLeft: '1px solid rgba(255,255,255,0.06)', paddingLeft: '30px' }}>
+            <div className="process-deliverables" style={{ borderLeft: '1px solid rgba(255,255,255,0.06)', paddingLeft: '30px' }}>
               <h4
                 style={{
                   fontFamily: 'var(--font-sans)',
