@@ -165,7 +165,7 @@ export default function Contact() {
                 value={form.name}
                 onChange={(e) => setForm({ ...form, name: e.target.value })}
                 required
-                placeholder="e.g.Sundar Pichai"
+                placeholder="name"
                 style={{
                   padding: '16px 20px',
                   borderRadius: '12px',
@@ -197,7 +197,7 @@ export default function Contact() {
                 value={form.email}
                 onChange={(e) => setForm({ ...form, email: e.target.value })}
                 required
-                placeholder="e.g. sundar@google.com"
+                placeholder="email"
                 style={{
                   padding: '16px 20px',
                   borderRadius: '12px',
