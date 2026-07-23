@@ -165,7 +165,7 @@ function App() {
       </header>
 
       {/* Pages Layout Container */}
-      <main style={{ position: 'relative', zIndex: 10 }}>
+      <main style={{ position: 'relative' }}>
         <Hero
           onStartProject={() => scrollToSection('contact')}
           onViewPortfolio={() => scrollToSection('portfolio')}
