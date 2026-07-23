@@ -678,7 +678,7 @@ export default function Portfolio() {
   const [showAll, setShowAll] = useState(false);
 
   useEffect(() => {
-    if (activeProject) {
+    if (activeProject || showAll) {
       document.body.style.overflow = 'hidden';
       if (window.lenis) window.lenis.stop();
     } else {
@@ -689,7 +689,7 @@ export default function Portfolio() {
       document.body.style.overflow = 'unset';
       if (window.lenis) window.lenis.start();
     };
-  }, [activeProject]);
+  }, [activeProject, showAll]);
 
   const featuredProjects = [
     projects.find((p) => p.id === 'rays-of-joy'),
@@ -967,87 +967,134 @@ export default function Portfolio() {
         </p>
       </div>
 
-      {/* Grouped Service Sections or Featured Projects */}
-      {!showAll ? (
-        <div style={{ marginTop: '50px' }}>
-          <div
+      {/* Featured Projects Grid (Always visible on homepage) */}
+      <div style={{ marginTop: '50px' }}>
+        <div
+          style={{
+            display: 'grid',
+            gridTemplateColumns: 'repeat(auto-fill, minmax(350px, 1fr))',
+            gap: '28px',
+          }}
+        >
+          {featuredProjects.map((project) => (
+            <div key={project.id}>
+              {renderCard(project)}
+            </div>
+          ))}
+        </div>
+
+        <div style={{ textAlign: 'center', marginTop: '50px' }}>
+          <button
+            onClick={() => setShowAll(true)}
+            className="magnetic-btn magnetic-btn-primary"
             style={{
-              display: 'grid',
-              gridTemplateColumns: 'repeat(auto-fill, minmax(350px, 1fr))',
-              gap: '28px',
+              padding: '12px 30px',
+              fontSize: '0.95rem',
+              border: 'none',
+              display: 'inline-flex',
+              alignItems: 'center',
+              gap: '8px',
             }}
           >
-            {featuredProjects.map((project) => (
-              <div key={project.id}>
-                {renderCard(project)}
-              </div>
-            ))}
-          </div>
-
-          <div style={{ textAlign: 'center', marginTop: '50px' }}>
-            <button
-              onClick={() => setShowAll(true)}
-              className="magnetic-btn magnetic-btn-primary"
-              style={{
-                padding: '12px 30px',
-                fontSize: '0.95rem',
-                border: 'none',
-                display: 'inline-flex',
-                alignItems: 'center',
-                gap: '8px',
-              }}
-            >
-              See All Projects
-              <ArrowRight size={16} />
-            </button>
-          </div>
+            See All Projects
+            <ArrowRight size={16} />
+          </button>
         </div>
-      ) : (
-        <div style={{ marginTop: '50px' }}>
-          {renderSection(
-            'Website & Platform Engineering',
-            'Custom corporate websites, educational portals, e-commerce storefronts, and dashboard architectures.',
-            websiteProjects
-          )}
+      </div>
 
-          {renderSection(
-            'Search Engine Optimization (SEO)',
-            'Technical index diagnostic audits, meta schema optimizations, and local search position scaling.',
-            seoProjects
-          )}
-
-          {renderSection(
-            'Social Media Marketing (SMM)',
-            'Influencer collaboration frameworks, reel storyboarding calendars, and follower acquisition systems.',
-            smmProjects
-          )}
-
-          {renderSection(
-            'PPC & Google Ads Bidding',
-            'Cost-per-click bid optimization logs, negative keyword lists, and search retargeting systems.',
-            ppcProjects
-          )}
-
-          <div style={{ textAlign: 'center', marginTop: '30px', marginBottom: '40px' }}>
+      {/* Full Screen Portfolio Overlay Modal */}
+      <AnimatePresence>
+        {showAll && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.3 }}
+            data-lenis-prevent
+            style={{
+              position: 'fixed',
+              top: 0,
+              left: 0,
+              width: '100vw',
+              height: '100vh',
+              background: '#000000',
+              zIndex: 99990,
+              overflowY: 'auto',
+              padding: '80px 20px',
+              WebkitOverflowScrolling: 'touch',
+            }}
+          >
+            {/* Close / Cancel Button */}
             <button
               onClick={() => setShowAll(false)}
-              className="magnetic-btn"
               style={{
-                padding: '12px 30px',
-                fontSize: '0.95rem',
-                background: 'transparent',
-                border: '1px solid var(--glass-border)',
-                color: '#fff',
-                display: 'inline-flex',
+                position: 'fixed',
+                top: '30px',
+                right: '40px',
+                width: '46px',
+                height: '46px',
+                borderRadius: '50%',
+                background: 'rgba(255, 255, 255, 0.05)',
+                border: '1px solid rgba(255, 255, 255, 0.1)',
+                display: 'flex',
                 alignItems: 'center',
-                gap: '8px',
+                justifyContent: 'center',
+                color: '#fff',
+                zIndex: 99995,
+                transition: 'all 0.3s ease',
+              }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.background = 'var(--primary)';
+                e.currentTarget.style.color = '#000';
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.background = 'rgba(255, 255, 255, 0.05)';
+                e.currentTarget.style.color = '#fff';
               }}
             >
-              Show Less
+              <X size={24} />
             </button>
-          </div>
-        </div>
-      )}
+
+            {/* Content Wrapper */}
+            <div style={{ maxWidth: '1400px', margin: '0 auto' }}>
+              <div className="section-header" style={{ marginBottom: '60px' }}>
+                <span className="section-tag">Portfolio</span>
+                <h2 className="section-title">Engineered to Perform</h2>
+                <p className="section-subtitle">
+                  Explore a curated selection of our digital builds, search indexing optimizations, and lead acquisition campaigns.
+                </p>
+              </div>
+
+              {/* Grouped Service Sections */}
+              <div>
+                {renderSection(
+                  'Website & Platform Engineering',
+                  'Custom corporate websites, educational portals, e-commerce storefronts, and dashboard architectures.',
+                  websiteProjects
+                )}
+
+                {renderSection(
+                  'Search Engine Optimization (SEO)',
+                  'Technical index diagnostic audits, meta schema optimizations, and local search position scaling.',
+                  seoProjects
+                )}
+
+                {renderSection(
+                  'Social Media Marketing (SMM)',
+                  'Influencer collaboration frameworks, reel storyboarding calendars, and follower acquisition systems.',
+                  smmProjects
+                )}
+
+                {renderSection(
+                  'PPC & Google Ads Bidding',
+                  'Cost-per-click bid optimization logs, negative keyword lists, and search retargeting systems.',
+                  ppcProjects
+                )}
+              </div>
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
 
       {/* Premium Detail Modal */}
       <AnimatePresence>
