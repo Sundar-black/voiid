@@ -943,7 +943,7 @@ export default function Portfolio() {
   };
 
   return (
-    <section id="portfolio" style={{ position: 'relative' }}>
+    <section id="portfolio" style={{ position: 'relative', zIndex: (showAll || activeProject) ? 99990 : 'auto' }}>
       {/* Background glow */}
       <div
         style={{

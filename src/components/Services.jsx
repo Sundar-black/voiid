@@ -367,7 +367,7 @@ export default function Services() {
   };
 
   return (
-    <section id="services" style={{ position: 'relative' }}>
+    <section id="services" style={{ position: 'relative', zIndex: activeService ? 99990 : 'auto' }}>
       {/* Background glow */}
       <div
         style={{
