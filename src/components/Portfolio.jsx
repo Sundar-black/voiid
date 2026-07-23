@@ -675,6 +675,7 @@ const projects = [
 
 export default function Portfolio() {
   const [activeProject, setActiveProject] = useState(null);
+  const [showAll, setShowAll] = useState(false);
 
   useEffect(() => {
     if (activeProject) {
@@ -689,6 +690,12 @@ export default function Portfolio() {
       if (window.lenis) window.lenis.start();
     };
   }, [activeProject]);
+
+  const featuredProjects = [
+    projects.find((p) => p.id === 'rays-of-joy'),
+    projects.find((p) => p.id === 'category-5-fitness-seo'),
+    projects.find((p) => p.id === 'brocade-coimbatore-smm'),
+  ].filter(Boolean);
 
   const websiteProjects = projects.filter(
     (p) =>
@@ -960,32 +967,87 @@ export default function Portfolio() {
         </p>
       </div>
 
-      {/* Grouped Service Sections */}
-      <div style={{ marginTop: '50px' }}>
-        {renderSection(
-          'Website & Platform Engineering',
-          'Custom corporate websites, educational portals, e-commerce storefronts, and dashboard architectures.',
-          websiteProjects
-        )}
+      {/* Grouped Service Sections or Featured Projects */}
+      {!showAll ? (
+        <div style={{ marginTop: '50px' }}>
+          <div
+            style={{
+              display: 'grid',
+              gridTemplateColumns: 'repeat(auto-fill, minmax(350px, 1fr))',
+              gap: '28px',
+            }}
+          >
+            {featuredProjects.map((project) => (
+              <div key={project.id}>
+                {renderCard(project)}
+              </div>
+            ))}
+          </div>
 
-        {renderSection(
-          'Search Engine Optimization (SEO)',
-          'Technical index diagnostic audits, meta schema optimizations, and local search position scaling.',
-          seoProjects
-        )}
+          <div style={{ textAlign: 'center', marginTop: '50px' }}>
+            <button
+              onClick={() => setShowAll(true)}
+              className="magnetic-btn magnetic-btn-primary"
+              style={{
+                padding: '12px 30px',
+                fontSize: '0.95rem',
+                border: 'none',
+                display: 'inline-flex',
+                alignItems: 'center',
+                gap: '8px',
+              }}
+            >
+              See All Projects
+              <ArrowRight size={16} />
+            </button>
+          </div>
+        </div>
+      ) : (
+        <div style={{ marginTop: '50px' }}>
+          {renderSection(
+            'Website & Platform Engineering',
+            'Custom corporate websites, educational portals, e-commerce storefronts, and dashboard architectures.',
+            websiteProjects
+          )}
 
-        {renderSection(
-          'Social Media Marketing (SMM)',
-          'Influencer collaboration frameworks, reel storyboarding calendars, and follower acquisition systems.',
-          smmProjects
-        )}
+          {renderSection(
+            'Search Engine Optimization (SEO)',
+            'Technical index diagnostic audits, meta schema optimizations, and local search position scaling.',
+            seoProjects
+          )}
 
-        {renderSection(
-          'PPC & Google Ads Bidding',
-          'Cost-per-click bid optimization logs, negative keyword lists, and search retargeting systems.',
-          ppcProjects
-        )}
-      </div>
+          {renderSection(
+            'Social Media Marketing (SMM)',
+            'Influencer collaboration frameworks, reel storyboarding calendars, and follower acquisition systems.',
+            smmProjects
+          )}
+
+          {renderSection(
+            'PPC & Google Ads Bidding',
+            'Cost-per-click bid optimization logs, negative keyword lists, and search retargeting systems.',
+            ppcProjects
+          )}
+
+          <div style={{ textAlign: 'center', marginTop: '30px', marginBottom: '40px' }}>
+            <button
+              onClick={() => setShowAll(false)}
+              className="magnetic-btn"
+              style={{
+                padding: '12px 30px',
+                fontSize: '0.95rem',
+                background: 'transparent',
+                border: '1px solid var(--glass-border)',
+                color: '#fff',
+                display: 'inline-flex',
+                alignItems: 'center',
+                gap: '8px',
+              }}
+            >
+              Show Less
+            </button>
+          </div>
+        </div>
+      )}
 
       {/* Premium Detail Modal */}
       <AnimatePresence>
