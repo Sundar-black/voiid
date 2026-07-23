@@ -1104,6 +1104,7 @@ export default function Portfolio() {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             onClick={() => setActiveProject(null)}
+            className="portfolio-detail-overlay"
             style={{
               position: 'fixed',
               top: 0,
@@ -1127,7 +1128,7 @@ export default function Portfolio() {
               exit={{ scale: 0.9, y: 60, opacity: 0 }}
               transition={{ type: 'spring', damping: 30, stiffness: 250 }}
               onClick={(e) => e.stopPropagation()}
-              className="glass-panel"
+              className="portfolio-detail-body glass-panel"
               style={{
                 width: '100%',
                 maxWidth: '900px',
@@ -1191,6 +1192,7 @@ export default function Portfolio() {
 
               {/* Modal Hero Banner */}
               <div
+                className="portfolio-hero-banner"
                 style={{
                   width: '100%',
                   height: '350px',
@@ -1214,6 +1216,7 @@ export default function Portfolio() {
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.15, duration: 0.4 }}
+                  className="portfolio-hero-text"
                   style={{
                     position: 'absolute',
                     bottom: '30px',
@@ -1222,6 +1225,7 @@ export default function Portfolio() {
                   }}
                 >
                   <span
+                    className="portfolio-detail-subtitle"
                     style={{
                       fontFamily: 'var(--font-heading)',
                       color: 'var(--primary)',
@@ -1233,6 +1237,7 @@ export default function Portfolio() {
                     {activeProject.category}
                   </span>
                   <h2
+                    className="portfolio-detail-title"
                     style={{
                       fontFamily: 'var(--font-heading)',
                       fontSize: '2.3rem',
@@ -1251,9 +1256,11 @@ export default function Portfolio() {
                 initial={{ opacity: 0, y: 35 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.25, duration: 0.5, ease: 'easeOut' }}
+                className="portfolio-detail-grid"
                 style={{ padding: '40px', textAlign: 'left' }}
               >
                 <div
+                  className="portfolio-detail-columns"
                   style={{
                     display: 'grid',
                     gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))',
@@ -1349,6 +1356,7 @@ export default function Portfolio() {
                   }}
                 >
                   <div
+                    className="portfolio-metrics-grid"
                     style={{
                       display: 'grid',
                       gridTemplateColumns: activeProject.metrics.length === 4 ? 'repeat(2, 1fr)' : 'repeat(3, 1fr)',
@@ -1360,6 +1368,7 @@ export default function Portfolio() {
                     {activeProject.metrics && activeProject.metrics.map((m, i) => (
                       <div
                         key={i}
+                        className="portfolio-metric-item"
                         style={{
                           borderRight: (i + 1) % (activeProject.metrics.length === 4 ? 2 : 3) !== 0 && i < activeProject.metrics.length - 1 ? '1px solid rgba(255,255,255,0.06)' : 'none',
                           padding: '10px',
