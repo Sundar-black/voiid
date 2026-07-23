@@ -40,7 +40,7 @@ const appCategories = [
     description: 'Localized Llama model processing, voice conversion transcripts, and vector memory retrieval.',
     tech: 'Flutter + Python FastAPI',
     stat: '150ms Response Latency',
-    mockBg: 'linear-gradient(135deg, #aa3bff, #00FF66)',
+    mockBg: 'linear-gradient(135deg, #aa3bff, #247B1B)',
     color: 'var(--primary)',
   },
   {
@@ -98,7 +98,7 @@ export default function MobileShowcase() {
           transform: 'translate(-50%, -50%)',
           width: '600px',
           height: '600px',
-          background: 'rgba(0, 255, 102, 0.03)',
+          background: 'rgba(36, 123, 27, 0.03)',
           filter: 'blur(160px)',
           borderRadius: '50%',
           pointerEvents: 'none',
@@ -157,10 +157,10 @@ export default function MobileShowcase() {
                   fontFamily: 'var(--font-sans)',
                   fontSize: '1rem',
                   textAlign: 'left',
-                  background: activeCat.id === cat.id ? 'rgba(0, 255, 102, 0.06)' : 'rgba(255,255,255,0.01)',
+                  background: activeCat.id === cat.id ? 'rgba(36, 123, 27, 0.06)' : 'rgba(255,255,255,0.01)',
                   color: activeCat.id === cat.id ? 'var(--primary)' : 'var(--text-secondary)',
                   border: '1px solid',
-                  borderColor: activeCat.id === cat.id ? 'rgba(0, 255, 102, 0.25)' : 'var(--glass-border)',
+                  borderColor: activeCat.id === cat.id ? 'rgba(36, 123, 27, 0.25)' : 'var(--glass-border)',
                   cursor: 'none',
                   display: 'flex',
                   justifyContent: 'space-between',
@@ -380,7 +380,7 @@ export default function MobileShowcase() {
                   <div style={{ fontSize: '0.5rem', color: 'rgba(255,255,255,0.5)', letterSpacing: '0.5px' }}>SYNC LATENCY</div>
                   <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'baseline', marginTop: '2px' }}>
                     <span style={{ fontSize: '0.95rem', fontWeight: 700, color: '#fff' }}>10.2 ms</span>
-                    <span style={{ fontSize: '0.55rem', color: '#00FF66' }}>STABLE</span>
+                    <span style={{ fontSize: '0.55rem', color: '#247B1B' }}>STABLE</span>
                   </div>
                   <div style={{ display: 'flex', gap: '2px', marginTop: '6px' }}>
                     <div style={{ flex: 1, height: '3px', background: 'var(--primary)' }} />

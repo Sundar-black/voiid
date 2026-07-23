@@ -31,7 +31,7 @@ export default function SEOAndMarketing() {
           right: '-10%',
           width: '500px',
           height: '500px',
-          background: 'rgba(0, 255, 102, 0.03)',
+          background: 'rgba(36, 123, 27, 0.03)',
           filter: 'blur(130px)',
           borderRadius: '50%',
           pointerEvents: 'none',
@@ -77,7 +77,7 @@ export default function SEOAndMarketing() {
                 width: '40px',
                 height: '40px',
                 borderRadius: '10px',
-                background: 'rgba(0,255,102,0.06)',
+                background: 'rgba(36, 123, 27,0.06)',
                 display: 'flex',
                 alignItems: 'center',
                 justifyContent: 'center',
@@ -125,7 +125,7 @@ export default function SEOAndMarketing() {
                 fill="none"
                 stroke="var(--primary)"
                 strokeWidth="3"
-                style={{ filter: 'drop-shadow(0 0 6px rgba(0, 255, 102, 0.5))' }}
+                style={{ filter: 'drop-shadow(0 0 6px rgba(36, 123, 27, 0.5))' }}
               />
 
               {/* Interactive Data points */}
@@ -235,7 +235,7 @@ export default function SEOAndMarketing() {
                 width: '40px',
                 height: '40px',
                 borderRadius: '10px',
-                background: 'rgba(0,255,102,0.06)',
+                background: 'rgba(36, 123, 27,0.06)',
                 display: 'flex',
                 alignItems: 'center',
                 justifyContent: 'center',
@@ -307,9 +307,9 @@ export default function SEOAndMarketing() {
                 display: 'flex',
                 justifyContent: 'space-between',
                 padding: '16px',
-                background: 'rgba(0, 255, 102, 0.02)',
+                background: 'rgba(36, 123, 27, 0.02)',
                 borderRadius: '12px',
-                border: '1px solid rgba(0, 255, 102, 0.15)',
+                border: '1px solid rgba(36, 123, 27, 0.15)',
                 alignItems: 'center',
               }}
             >

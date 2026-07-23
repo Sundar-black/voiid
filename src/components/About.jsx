@@ -85,7 +85,7 @@ export default function About() {
           right: '5%',
           width: '400px',
           height: '400px',
-          background: 'rgba(0, 255, 102, 0.05)',
+          background: 'rgba(36, 123, 27, 0.05)',
           filter: 'blur(120px)',
           borderRadius: '50%',
           pointerEvents: 'none',

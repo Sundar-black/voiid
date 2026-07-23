@@ -32,7 +32,7 @@ export default function Contact() {
           transform: 'translateX(-50%)',
           width: '500px',
           height: '500px',
-          background: 'rgba(0, 255, 102, 0.03)',
+          background: 'rgba(36, 123, 27, 0.03)',
           filter: 'blur(140px)',
           borderRadius: '50%',
           pointerEvents: 'none',
@@ -82,8 +82,8 @@ export default function Contact() {
                   width: '42px',
                   height: '42px',
                   borderRadius: '50%',
-                  background: 'rgba(0, 255, 102, 0.06)',
-                  border: '1px solid rgba(0, 255, 102, 0.15)',
+                  background: 'rgba(36, 123, 27, 0.06)',
+                  border: '1px solid rgba(36, 123, 27, 0.15)',
                   display: 'flex',
                   alignItems: 'center',
                   justifyContent: 'center',
@@ -105,8 +105,8 @@ export default function Contact() {
                   width: '42px',
                   height: '42px',
                   borderRadius: '50%',
-                  background: 'rgba(0, 255, 102, 0.06)',
-                  border: '1px solid rgba(0, 255, 102, 0.15)',
+                  background: 'rgba(36, 123, 27, 0.06)',
+                  border: '1px solid rgba(36, 123, 27, 0.15)',
                   display: 'flex',
                   alignItems: 'center',
                   justifyContent: 'center',
@@ -128,8 +128,8 @@ export default function Contact() {
                   width: '42px',
                   height: '42px',
                   borderRadius: '50%',
-                  background: 'rgba(0, 255, 102, 0.06)',
-                  border: '1px solid rgba(0, 255, 102, 0.15)',
+                  background: 'rgba(36, 123, 27, 0.06)',
+                  border: '1px solid rgba(36, 123, 27, 0.15)',
                   display: 'flex',
                   alignItems: 'center',
                   justifyContent: 'center',
@@ -180,7 +180,7 @@ export default function Contact() {
                 }}
                 onFocus={(e) => {
                   e.target.style.borderColor = 'var(--primary)';
-                  e.target.style.boxShadow = '0 0 10px rgba(0, 255, 102, 0.15)';
+                  e.target.style.boxShadow = '0 0 10px rgba(36, 123, 27, 0.15)';
                 }}
                 onBlur={(e) => {
                   e.target.style.borderColor = 'var(--glass-border)';
@@ -212,7 +212,7 @@ export default function Contact() {
                 }}
                 onFocus={(e) => {
                   e.target.style.borderColor = 'var(--primary)';
-                  e.target.style.boxShadow = '0 0 10px rgba(0, 255, 102, 0.15)';
+                  e.target.style.boxShadow = '0 0 10px rgba(36, 123, 27, 0.15)';
                 }}
                 onBlur={(e) => {
                   e.target.style.borderColor = 'var(--glass-border)';
@@ -245,7 +245,7 @@ export default function Contact() {
                 }}
                 onFocus={(e) => {
                   e.target.style.borderColor = 'var(--primary)';
-                  e.target.style.boxShadow = '0 0 10px rgba(0, 255, 102, 0.15)';
+                  e.target.style.boxShadow = '0 0 10px rgba(36, 123, 27, 0.15)';
                 }}
                 onBlur={(e) => {
                   e.target.style.borderColor = 'var(--glass-border)';

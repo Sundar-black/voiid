@@ -58,7 +58,7 @@ export default function WhyChooseUs() {
           left: '-5%',
           width: '450px',
           height: '450px',
-          background: 'rgba(0, 255, 102, 0.03)',
+          background: 'rgba(36, 123, 27, 0.03)',
           filter: 'blur(120px)',
           borderRadius: '50%',
           pointerEvents: 'none',
@@ -95,7 +95,7 @@ export default function WhyChooseUs() {
               width: '260px',
               height: '260px',
               borderRadius: '50%',
-              border: '1px dashed rgba(0, 255, 102, 0.25)',
+              border: '1px dashed rgba(36, 123, 27, 0.25)',
               position: 'relative',
               display: 'flex',
               alignItems: 'center',
@@ -158,7 +158,7 @@ export default function WhyChooseUs() {
                 width: '70%',
                 height: '70%',
                 borderRadius: '50%',
-                border: '1px dashed rgba(0, 255, 102, 0.12)',
+                border: '1px dashed rgba(36, 123, 27, 0.12)',
               }}
             >
               <div
@@ -205,8 +205,8 @@ export default function WhyChooseUs() {
                     width: '46px',
                     height: '46px',
                     borderRadius: '12px',
-                    background: 'rgba(0, 255, 102, 0.06)',
-                    border: '1px solid rgba(0, 255, 102, 0.15)',
+                    background: 'rgba(36, 123, 27, 0.06)',
+                    border: '1px solid rgba(36, 123, 27, 0.15)',
                     display: 'flex',
                     alignItems: 'center',
                     justifyContent: 'center',

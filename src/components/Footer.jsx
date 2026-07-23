@@ -35,7 +35,7 @@ export default function Footer() {
                 cx="50"
                 cy="50"
                 r="35"
-                stroke="#4caf50"
+                stroke="#247B1B"
                 strokeWidth="12"
                 fill="none"
               />

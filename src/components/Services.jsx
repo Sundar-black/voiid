@@ -62,7 +62,7 @@ function ServiceCard({ title, icon: Icon, items, onClick }) {
             bottom: 0,
             borderRadius: 'inherit',
             padding: '1px',
-            background: `radial-gradient(400px circle at ${coords.x}px ${coords.y}px, rgba(0, 255, 102, 0.3), transparent 60%)`,
+            background: `radial-gradient(400px circle at ${coords.x}px ${coords.y}px, rgba(36, 123, 27, 0.3), transparent 60%)`,
             WebkitMask:
               'linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)',
             WebkitMaskComposite: 'xor',
@@ -83,7 +83,7 @@ function ServiceCard({ title, icon: Icon, items, onClick }) {
           bottom: 0,
           borderRadius: 'inherit',
           background: isHovered
-            ? `radial-gradient(300px circle at ${coords.x}px ${coords.y}px, rgba(0, 255, 102, 0.05), transparent 80%)`
+            ? `radial-gradient(300px circle at ${coords.x}px ${coords.y}px, rgba(36, 123, 27, 0.05), transparent 80%)`
             : 'none',
           pointerEvents: 'none',
           zIndex: 1,
@@ -97,13 +97,13 @@ function ServiceCard({ title, icon: Icon, items, onClick }) {
             width: '60px',
             height: '60px',
             borderRadius: '16px',
-            background: 'rgba(0, 255, 102, 0.06)',
-            border: '1px solid rgba(0, 255, 102, 0.15)',
+            background: 'rgba(36, 123, 27, 0.06)',
+            border: '1px solid rgba(36, 123, 27, 0.15)',
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'center',
             marginBottom: '28px',
-            boxShadow: isHovered ? '0 0 20px rgba(0, 255, 102, 0.2)' : 'none',
+            boxShadow: isHovered ? '0 0 20px rgba(36, 123, 27, 0.2)' : 'none',
             transition: 'box-shadow 0.3s ease, transform 0.3s ease',
             transform: isHovered ? 'scale(1.1) rotate(5deg)' : 'none',
           }}
@@ -376,7 +376,7 @@ export default function Services() {
           left: '-10%',
           width: '500px',
           height: '500px',
-          background: 'rgba(0, 255, 102, 0.04)',
+          background: 'rgba(36, 123, 27, 0.04)',
           filter: 'blur(130px)',
           borderRadius: '50%',
           pointerEvents: 'none',
@@ -449,8 +449,8 @@ export default function Services() {
                 borderRadius: '30px',
                 background: 'rgba(10, 10, 10, 0.95)',
                 position: 'relative',
-                boxShadow: '0 30px 90px rgba(0, 255, 102, 0.08)',
-                border: '1px solid rgba(0, 255, 102, 0.2)',
+                boxShadow: '0 30px 90px rgba(36, 123, 27, 0.08)',
+                border: '1px solid rgba(36, 123, 27, 0.2)',
                 display: 'flex',
                 flexDirection: 'column',
                 overflow: 'hidden',
@@ -476,7 +476,7 @@ export default function Services() {
                   zIndex: 10,
                   transition: 'background 0.3s ease',
                 }}
-                onMouseEnter={(e) => e.target.style.background = 'rgba(0, 255, 102, 0.2)'}
+                onMouseEnter={(e) => e.target.style.background = 'rgba(36, 123, 27, 0.2)'}
                 onMouseLeave={(e) => e.target.style.background = 'rgba(255,255,255,0.05)'}
               >
                 <X size={20} />
@@ -501,12 +501,12 @@ export default function Services() {
                     width: '64px',
                     height: '64px',
                     borderRadius: '18px',
-                    background: 'rgba(0, 255, 102, 0.08)',
-                    border: '1px solid rgba(0, 255, 102, 0.2)',
+                    background: 'rgba(36, 123, 27, 0.08)',
+                    border: '1px solid rgba(36, 123, 27, 0.2)',
                     display: 'flex',
                     alignItems: 'center',
                     justifyContent: 'center',
-                    boxShadow: '0 0 20px rgba(0, 255, 102, 0.1)',
+                    boxShadow: '0 0 20px rgba(36, 123, 27, 0.1)',
                   }}
                 >
                   {(() => {
@@ -573,8 +573,8 @@ export default function Services() {
                   style={{
                     padding: '24px',
                     borderRadius: '20px',
-                    background: 'rgba(0, 255, 102, 0.02)',
-                    border: '1px solid rgba(0, 255, 102, 0.15)',
+                    background: 'rgba(36, 123, 27, 0.02)',
+                    border: '1px solid rgba(36, 123, 27, 0.15)',
                     display: 'flex',
                     alignItems: 'center',
                     gap: '24px',
@@ -613,15 +613,15 @@ export default function Services() {
                       fontWeight: 600,
                       fontSize: '0.9rem',
                       cursor: 'none',
-                      boxShadow: '0 0 20px rgba(0,255,102,0.2)',
+                      boxShadow: '0 0 20px rgba(36, 123, 27,0.2)',
                       transition: 'all 0.3s ease',
                     }}
                     onMouseEnter={(e) => {
-                      e.target.style.boxShadow = '0 0 30px rgba(0,255,102,0.4)';
+                      e.target.style.boxShadow = '0 0 30px rgba(36, 123, 27,0.4)';
                       e.target.style.transform = 'scale(1.02)';
                     }}
                     onMouseLeave={(e) => {
-                      e.target.style.boxShadow = '0 0 20px rgba(0,255,102,0.2)';
+                      e.target.style.boxShadow = '0 0 20px rgba(36, 123, 27,0.2)';
                       e.target.style.transform = 'scale(1)';
                     }}
                   >

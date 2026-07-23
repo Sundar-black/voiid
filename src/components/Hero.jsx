@@ -44,7 +44,7 @@ export default function Hero({ onStartProject, onViewPortfolio }) {
           left: '10%',
           width: '350px',
           height: '350px',
-          background: 'rgba(0, 255, 102, 0.08)',
+          background: 'rgba(36, 123, 27, 0.08)',
           filter: 'blur(100px)',
           borderRadius: '50%',
           pointerEvents: 'none',
@@ -280,7 +280,7 @@ export default function Hero({ onStartProject, onViewPortfolio }) {
                   alignItems: 'flex-end',
                 }}
               >
-                <Server size={24} color="#00FF66" style={{ opacity: 0.6 }} />
+                <Server size={24} color="#247B1B" style={{ opacity: 0.6 }} />
                 <div style={{ textAlign: 'right' }}>
                   <div
                     style={{
@@ -310,7 +310,7 @@ export default function Hero({ onStartProject, onViewPortfolio }) {
               position: 'absolute',
               width: '440px',
               height: '12px',
-              background: 'rgba(0, 255, 102, 0.2)',
+              background: 'rgba(36, 123, 27, 0.2)',
               bottom: '90px',
               borderRadius: '50%',
               filter: 'blur(10px)',
@@ -364,13 +364,13 @@ export default function Hero({ onStartProject, onViewPortfolio }) {
                   width: '45px',
                   height: '45px',
                   borderRadius: '50%',
-                  background: 'rgba(0, 255, 102, 0.1)',
+                  background: 'rgba(36, 123, 27, 0.1)',
                   border: '1px solid var(--primary)',
                   display: 'flex',
                   alignItems: 'center',
                   justifyContent: 'center',
                   margin: '0 auto',
-                  boxShadow: '0 0 12px rgba(0, 255, 102, 0.2)',
+                  boxShadow: '0 0 12px rgba(36, 123, 27, 0.2)',
                 }}
               >
                 <Cpu size={20} color="var(--primary)" />
@@ -465,7 +465,7 @@ export default function Hero({ onStartProject, onViewPortfolio }) {
                   width: '18px',
                   height: '18px',
                   borderRadius: '4px',
-                  background: 'rgba(0, 255, 102, 0.15)',
+                  background: 'rgba(36, 123, 27, 0.15)',
                   display: 'flex',
                   alignItems: 'center',
                   justifyContent: 'center',
@@ -505,7 +505,7 @@ export default function Hero({ onStartProject, onViewPortfolio }) {
                 style={{
                   height: '30%',
                   width: '100%',
-                  background: 'rgba(0,255,102,0.2)',
+                  background: 'rgba(36, 123, 27,0.2)',
                   borderRadius: '1px',
                 }}
               />
@@ -513,7 +513,7 @@ export default function Hero({ onStartProject, onViewPortfolio }) {
                 style={{
                   height: '45%',
                   width: '100%',
-                  background: 'rgba(0,255,102,0.2)',
+                  background: 'rgba(36, 123, 27,0.2)',
                   borderRadius: '1px',
                 }}
               />
@@ -521,7 +521,7 @@ export default function Hero({ onStartProject, onViewPortfolio }) {
                 style={{
                   height: '60%',
                   width: '100%',
-                  background: 'rgba(0,255,102,0.2)',
+                  background: 'rgba(36, 123, 27,0.2)',
                   borderRadius: '1px',
                 }}
               />

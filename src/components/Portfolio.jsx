@@ -797,7 +797,7 @@ export default function Portfolio() {
               fontSize: '0.7rem',
               color: 'var(--primary)',
               fontFamily: 'var(--font-heading)',
-              border: '1px solid rgba(0, 255, 102, 0.2)',
+              border: '1px solid rgba(36, 123, 27, 0.2)',
             }}
           >
             {project.category}
@@ -822,8 +822,8 @@ export default function Portfolio() {
               {isSEO && (
                 <span
                   style={{
-                    background: 'rgba(0, 255, 102, 0.06)',
-                    border: '1px solid rgba(0, 255, 102, 0.15)',
+                    background: 'rgba(36, 123, 27, 0.06)',
+                    border: '1px solid rgba(36, 123, 27, 0.15)',
                     color: 'var(--primary)',
                     padding: '4px 10px',
                     borderRadius: '20px',
@@ -952,7 +952,7 @@ export default function Portfolio() {
           right: '-10%',
           width: '500px',
           height: '500px',
-          background: 'rgba(0, 255, 102, 0.03)',
+          background: 'rgba(36, 123, 27, 0.03)',
           filter: 'blur(140px)',
           borderRadius: '50%',
           pointerEvents: 'none',
@@ -1088,7 +1088,7 @@ export default function Portfolio() {
                 borderRadius: '30px',
                 background: 'rgba(10, 10, 10, 0.9)',
                 position: 'relative',
-                boxShadow: '0 30px 90px rgba(0, 255, 102, 0.05)',
+                boxShadow: '0 30px 90px rgba(36, 123, 27, 0.05)',
                 display: 'flex',
                 flexDirection: 'column',
                 overflow: 'hidden',
@@ -1104,7 +1104,7 @@ export default function Portfolio() {
                   width: '44px',
                   height: '44px',
                   borderRadius: '50%',
-                  background: 'rgba(0, 255, 102, 0.1)',
+                  background: 'rgba(36, 123, 27, 0.1)',
                   border: '1px solid var(--primary)',
                   display: 'flex',
                   alignItems: 'center',
@@ -1113,7 +1113,7 @@ export default function Portfolio() {
                   cursor: 'none',
                   zIndex: 10,
                   transition: 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)',
-                  boxShadow: '0 4px 12px rgba(0, 255, 102, 0.15)',
+                  boxShadow: '0 4px 12px rgba(36, 123, 27, 0.15)',
                 }}
                 onMouseEnter={(e) => {
                   e.currentTarget.style.background = 'var(--primary)';
@@ -1122,10 +1122,10 @@ export default function Portfolio() {
                   e.currentTarget.style.boxShadow = '0 0 20px var(--primary)';
                 }}
                 onMouseLeave={(e) => {
-                  e.currentTarget.style.background = 'rgba(0, 255, 102, 0.1)';
+                  e.currentTarget.style.background = 'rgba(36, 123, 27, 0.1)';
                   e.currentTarget.style.color = 'var(--primary)';
                   e.currentTarget.style.transform = 'scale(1)';
-                  e.currentTarget.style.boxShadow = '0 4px 12px rgba(0, 255, 102, 0.15)';
+                  e.currentTarget.style.boxShadow = '0 4px 12px rgba(36, 123, 27, 0.15)';
                 }}
               >
                 <X size={22} strokeWidth={2.5} />
@@ -1240,8 +1240,8 @@ export default function Portfolio() {
                             style={{
                               fontSize: '0.75rem',
                               color: 'var(--primary)',
-                              background: 'rgba(0, 255, 102, 0.05)',
-                              border: '1px solid rgba(0, 255, 102, 0.2)',
+                              background: 'rgba(36, 123, 27, 0.05)',
+                              border: '1px solid rgba(36, 123, 27, 0.2)',
                               borderRadius: '8px',
                               padding: '4px 12px',
                             }}
@@ -1296,8 +1296,8 @@ export default function Portfolio() {
                   style={{
                     padding: '30px',
                     borderRadius: '20px',
-                    background: 'rgba(0, 255, 102, 0.02)',
-                    border: '1px solid rgba(0, 255, 102, 0.15)',
+                    background: 'rgba(36, 123, 27, 0.02)',
+                    border: '1px solid rgba(36, 123, 27, 0.15)',
                     marginBottom: '40px',
                   }}
                 >
