@@ -1113,7 +1113,7 @@ export default function Portfolio() {
               background: 'rgba(5, 5, 5, 0.85)',
               backdropFilter: 'blur(16px)',
               WebkitBackdropFilter: 'blur(16px)',
-              zIndex: 9999,
+              zIndex: 100000,
               display: 'flex',
               alignItems: 'center',
               justifyContent: 'center',
@@ -1378,8 +1378,6 @@ export default function Portfolio() {
                     ))}
                   </div>
                 </motion.div>
-
-
               </motion.div>
             </div>
           </motion.div>
