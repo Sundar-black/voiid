@@ -526,3 +526,14 @@ button *,
   -ms-overflow-style: none;
   scrollbar-width: none;
 }
+
+/* Smoothly fade out global header when any fullscreen modal/overlay is active */
+body[style*="overflow: hidden"] header,
+body[style*="overflow:hidden"] header {
+  opacity: 0 !important;
+  pointer-events: none !important;
+}
+
+header {
+  transition: top 0.3s ease, height 0.3s ease, background-color 0.3s ease, opacity 0.3s ease !important;
+}
