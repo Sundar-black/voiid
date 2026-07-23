@@ -284,8 +284,8 @@ export default function Process() {
             height: '2px',
             background: 'rgba(255, 255, 255, 0.05)',
             top: '50%',
-            left: '30px',
-            right: '30px',
+            left: '27px',
+            right: '27px',
             transform: 'translateY(-50%)',
             zIndex: 1,
             pointerEvents: 'none',
@@ -300,8 +300,8 @@ export default function Process() {
             background: 'var(--primary)',
             boxShadow: '0 0 10px var(--primary)',
             top: '50%',
-            left: '30px',
-            width: `calc(${(activeStep / (stepsList.length - 1)) * 100}% - 60px)`,
+            left: '27px',
+            width: `calc(${(activeStep / (stepsList.length - 1)) * 100}% - ${(activeStep / (stepsList.length - 1)) * 54}px)`,
             transform: 'translateY(-50%)',
             zIndex: 2,
             pointerEvents: 'none',
@@ -319,9 +319,8 @@ export default function Process() {
               key={idx}
               onClick={() => setActiveStep(idx)}
               style={{
-                background: '#050505',
+                background: 'transparent',
                 border: 'none',
-                cursor: 'none',
                 position: 'relative',
                 zIndex: 3,
                 display: 'flex',
