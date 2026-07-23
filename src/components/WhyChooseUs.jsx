@@ -95,7 +95,7 @@ export default function WhyChooseUs() {
               width: '260px',
               height: '260px',
               borderRadius: '50%',
-              border: '1px dashed rgba(36, 123, 27, 0.25)',
+              border: '1px dashed rgba(36, 123, 27, 0.65)',
               position: 'relative',
               display: 'flex',
               alignItems: 'center',
@@ -158,7 +158,7 @@ export default function WhyChooseUs() {
                 width: '70%',
                 height: '70%',
                 borderRadius: '50%',
-                border: '1px dashed rgba(36, 123, 27, 0.12)',
+                border: '1px dashed rgba(36, 123, 27, 0.45)',
               }}
             >
               <div
