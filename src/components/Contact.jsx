@@ -141,8 +141,8 @@ export default function Contact() {
               </div>
               <div>
                 <div style={{ fontSize: '0.75rem', color: 'var(--text-secondary)' }}>PHONE RELAY</div>
-                <a href="tel:+916379108978" style={{ fontSize: '0.95rem', color: '#fff', textDecoration: 'none', cursor: 'none' }}>
-                  +91 6379108978
+                <a href="tel:+919087244011" style={{ fontSize: '0.95rem', color: '#fff', textDecoration: 'none', cursor: 'none' }}>
+                  +91 90872 44011
                 </a>
               </div>
             </div>
