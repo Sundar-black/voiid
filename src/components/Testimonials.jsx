@@ -172,22 +172,9 @@ export default function Testimonials() {
               </p>
 
               {/* Client Info */}
-              <div style={{ display: 'flex', alignItems: 'center', gap: '16px' }}>
-                <img
-                  src={test.avatar}
-                  alt={test.name}
-                  style={{
-                    width: '48px',
-                    height: '48px',
-                    borderRadius: '50%',
-                    border: '1px solid var(--primary)',
-                    objectFit: 'cover',
-                  }}
-                />
-                <div>
-                  <h4 style={{ fontSize: '1rem', fontWeight: 600, color: '#fff' }}>{test.name}</h4>
-                  <span style={{ fontSize: '0.75rem', color: 'var(--text-secondary)' }}>{test.title}</span>
-                </div>
+              <div style={{ marginTop: '4px' }}>
+                <h4 style={{ fontSize: '1rem', fontWeight: 600, color: '#fff', margin: 0 }}>{test.name}</h4>
+                <span style={{ fontSize: '0.75rem', color: 'var(--text-secondary)' }}>{test.title}</span>
               </div>
             </motion.div>
           );
