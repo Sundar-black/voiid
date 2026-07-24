@@ -13,6 +13,7 @@ import Testimonials from './components/Testimonials';
 import Process from './components/Process';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
+import CustomCursor from './components/CustomCursor';
 
 function App() {
   const [navCompact, setNavCompact] = useState(false);
@@ -56,7 +57,7 @@ function App() {
 
   return (
     <>
-
+      <CustomCursor />
 
       {/* Screen noise overlay */}
       <div className="noise-overlay" />

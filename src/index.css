@@ -676,9 +676,9 @@ button *,
   }
 }
 
-/* Restore Standard Browser Cursors Globally */
+/* Restore standard browser cursors globally */
 * {
-  cursor: auto !important;
+  cursor: auto;
 }
 
 a, 
@@ -690,7 +690,7 @@ select,
 [onClick],
 .interactive,
 .magnetic-btn {
-  cursor: pointer !important;
+  cursor: pointer;
 }
 
 /* Ensure text fields get correct text selection cursor */
@@ -701,15 +701,7 @@ input[type="search"],
 input[type="number"],
 input:not([type="button"]):not([type="submit"]),
 textarea {
-  cursor: text !important;
-}
-
-/* Let nested children inside clickable items inherit pointer cursor */
-a *, 
-button *, 
-[role="button"] *, 
-[onClick] * {
-  cursor: pointer !important;
+  cursor: text;
 }
 
 /* Hide scrollbar for process tabs container while keeping scroll function */
