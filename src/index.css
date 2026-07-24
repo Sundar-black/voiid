@@ -23,14 +23,6 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  cursor: none !important; /* Hide default cursor to use custom premium cursor */
-}
-
-/* Enable default cursor fallback on touch devices */
-@media (max-width: 1024px) {
-  * {
-    cursor: auto !important;
-  }
 }
 
 body {
@@ -678,7 +670,7 @@ button *,
 
 /* Restore standard browser cursors globally */
 * {
-  cursor: auto;
+  cursor: auto !important;
 }
 
 a, 
@@ -690,7 +682,7 @@ select,
 [onClick],
 .interactive,
 .magnetic-btn {
-  cursor: pointer;
+  cursor: pointer !important;
 }
 
 /* Ensure text fields get correct text selection cursor */
@@ -701,7 +693,7 @@ input[type="search"],
 input[type="number"],
 input:not([type="button"]):not([type="submit"]),
 textarea {
-  cursor: text;
+  cursor: text !important;
 }
 
 /* Hide scrollbar for process tabs container while keeping scroll function */
