@@ -809,3 +809,60 @@ header {
     padding-top: 20px !important;
   }
 }
+
+/* Infinite Logo Marquee */
+.logo-marquee-container {
+  overflow: hidden;
+  width: 100%;
+  position: relative;
+  padding: 40px 0;
+  display: flex;
+  align-items: center;
+  mask-image: linear-gradient(to right, transparent, black 15%, black 85%, transparent);
+  -webkit-mask-image: linear-gradient(to right, transparent, black 15%, black 85%, transparent);
+  margin-top: 30px;
+}
+
+.logo-marquee-track {
+  display: flex;
+  gap: 40px;
+  width: max-content;
+  animation: scroll-marquee 25s linear infinite;
+  align-items: center;
+}
+
+.logo-marquee-container:hover .logo-marquee-track {
+  animation-play-state: paused;
+}
+
+.logo-card {
+  flex-shrink: 0;
+  height: 80px;
+  width: 180px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.4s ease;
+}
+
+.logo-card:hover {
+  transform: scale(1.1);
+}
+
+.logo-card img {
+  max-height: 100%;
+  max-width: 100%;
+  object-fit: contain;
+  transition: all 0.4s ease;
+}
+
+@keyframes scroll-marquee {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(-50%, 0, 0);
+  }
+}
+
+

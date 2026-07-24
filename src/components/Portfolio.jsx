@@ -969,18 +969,30 @@ export default function Portfolio() {
 
       {/* Featured Projects Grid (Always visible on homepage) */}
       <div style={{ marginTop: '50px' }}>
-        <div
-          style={{
-            display: 'grid',
-            gridTemplateColumns: 'repeat(auto-fill, minmax(350px, 1fr))',
-            gap: '28px',
-          }}
-        >
-          {featuredProjects.map((project) => (
-            <div key={project.id}>
-              {renderCard(project)}
-            </div>
-          ))}
+        <div className="logo-marquee-container">
+          <div className="logo-marquee-track">
+            {[
+              { src: '/projects/rays-of-joy-logo.png', alt: 'Rays of Joy' },
+              { src: '/projects/engineering-corner-logo.png', alt: 'Engineering Corner' },
+              { src: '/projects/mayura-fitness-logo.png', alt: 'Mayura Fitness' },
+              { src: '/projects/category-5-fitness-logo.png', alt: 'Category 5 Fitness' },
+              { src: '/projects/skrubline-logo.png', alt: 'Skrubline' },
+              { src: '/projects/vineatz-logo.png', alt: 'Vineatz' },
+              { src: '/projects/sweaters-india-logo.png', alt: 'Sweaters India' },
+            ].concat([
+              { src: '/projects/rays-of-joy-logo.png', alt: 'Rays of Joy' },
+              { src: '/projects/engineering-corner-logo.png', alt: 'Engineering Corner' },
+              { src: '/projects/mayura-fitness-logo.png', alt: 'Mayura Fitness' },
+              { src: '/projects/category-5-fitness-logo.png', alt: 'Category 5 Fitness' },
+              { src: '/projects/skrubline-logo.png', alt: 'Skrubline' },
+              { src: '/projects/vineatz-logo.png', alt: 'Vineatz' },
+              { src: '/projects/sweaters-india-logo.png', alt: 'Sweaters India' },
+            ]).map((logo, idx) => (
+              <div key={idx} className="logo-card">
+                <img src={logo.src} alt={logo.alt} loading="lazy" />
+              </div>
+            ))}
+          </div>
         </div>
 
         <div style={{ textAlign: 'center', marginTop: '50px' }}>
