@@ -5,25 +5,25 @@ import { Quote, Star, ChevronLeft, ChevronRight } from 'lucide-react';
 const testimonials = [
   {
     quote:
-      "VOIID completely redesigned our enterprise catalog and API infrastructure. Their dedication to sub-second load times and custom animations transformed our product showcase, adding 150+ international distributors in record time.",
-    name: "Rajesh Nair",
-    title: "Operations Director, Sweaters India",
+      "We got our website done for Skrubline and the experience was great from start to finish. The site looks clean, loads fast, and really represents what our brand is about. Really happy with how it turned out, thank you!",
+    name: "Skrubline",
+    title: "Client",
     avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=150&q=80",
     rating: 5,
   },
   {
     quote:
-      "The customized Next.js booking engine and Stripe gateway they developed for Category 5 Fitness has automated all of our local membership pipelines. Our online scheduling bookings increased by 200% within 45 days.",
-    name: "Sarah Jenkins",
-    title: "Founding Partner, Category 5 Fitness",
+      "We asked for help with social media marketing for Foodies Land and honestly the results were great. Our page started getting way more engagement and people started noticing us online. Really happy with the work, thanks a lot!",
+    name: "Ashik",
+    title: "Founder, Foodies Land",
     avatar: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=150&q=80",
     rating: 5,
   },
   {
     quote:
-      "Building a healthcare application for pediatric mental support required severe security compliance and high check-in engagement. VOIID solved both with Flutter and Supabase, building a 4.8 star rated ecosystem.",
-    name: "Dr. Alisha Meade",
-    title: "Clinical Lead, Rays of Joy App",
+      "Working with the developer on the Rays of Joy website was a fantastic experience. The final site perfectly captured our brand's playful, joyful spirit while staying easy to navigate for parents and kids alike. Professional, creative, and a pleasure to work with!",
+    name: "Shruthika",
+    title: "Founder, Rays of Joy",
     avatar: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=150&q=80",
     rating: 5,
   },
