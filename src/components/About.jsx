@@ -92,6 +92,8 @@ export default function About() {
         }}
       />
 
+
+
       <div className="section-header">
         <span className="section-tag">About VOIID</span>
         <h2 className="section-title">A New Standard of Digital Execution</h2>

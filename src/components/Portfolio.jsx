@@ -959,6 +959,8 @@ export default function Portfolio() {
         }}
       />
 
+
+
       <div className="section-header">
         <span className="section-tag">Portfolio</span>
         <h2 className="section-title">Engineered to Perform</h2>

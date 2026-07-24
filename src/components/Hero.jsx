@@ -51,6 +51,8 @@ export default function Hero({ onStartProject, onViewPortfolio }) {
         }}
       />
 
+
+
       {/* Left side text column */}
       <div
         className="hero-content"

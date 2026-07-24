@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { motion } from 'framer-motion';
 import { Mail, Phone, MapPin, Send, CheckCircle2 } from 'lucide-react';
 import { WEB3FORMS_ACCESS_KEY } from '../config';
 
@@ -63,6 +64,8 @@ export default function Contact() {
           pointerEvents: 'none',
         }}
       />
+
+
 
       <div className="section-header">
         <span className="section-tag">Connection</span>

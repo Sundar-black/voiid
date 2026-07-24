@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from 'react';
+import { motion } from 'framer-motion';
 
 export default function CustomCursor() {
   const dotRef = useRef(null);
@@ -29,7 +30,6 @@ export default function CustomCursor() {
     document.addEventListener('mouseleave', onMouseLeave);
     document.addEventListener('mouseenter', onMouseEnter);
 
-    // Track hovered items
     const updateHoverState = () => {
       const hoverables = document.querySelectorAll(
         'a, button, input, textarea, select, .interactive-card, .magnetic-btn, .portfolio-card'
@@ -59,8 +59,8 @@ export default function CustomCursor() {
     const dotPos = { x: 0, y: 0 };
     
     const tick = () => {
-      dotPos.x += (mouse.x - dotPos.x) * 0.18;
-      dotPos.y += (mouse.y - dotPos.y) * 0.18;
+      dotPos.x += (mouse.x - dotPos.x) * 0.45;
+      dotPos.y += (mouse.y - dotPos.y) * 0.45;
       dot.style.transform = `translate3d(${dotPos.x}px, ${dotPos.y}px, 0)`;
       animationFrameId = requestAnimationFrame(tick);
     };
@@ -83,24 +83,27 @@ export default function CustomCursor() {
       ref={dotRef}
       style={{
         position: 'fixed',
-        top: -4,
-        left: -4,
+        top: 0,
+        left: 0,
         width: 8,
         height: 8,
+        margin: '-4px 0 0 -4px',
         borderRadius: '50%',
         backgroundColor: '#247B1B',
         zIndex: 99999,
         pointerEvents: 'none',
         opacity: hidden ? 0 : 1,
-        transition: 'opacity 0.2s ease, width 0.2s ease, height 0.2s ease, background-color 0.2s ease',
+        transition: 'opacity 0.2s ease, width 0.2s ease, height 0.2s ease, margin 0.2s ease, background-color 0.2s ease',
         transform: 'translate3d(0,0,0)',
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
         ...(hovered && {
           width: 14,
           height: 14,
-          top: -7,
-          left: -7,
+          margin: '-7px 0 0 -7px',
           backgroundColor: '#247B1B',
-          boxShadow: '0 0 10px rgba(36, 123, 27, 0.5)',
+          boxShadow: '0 0 12px rgba(36, 123, 27, 0.65)',
         }),
         ...(clicked && {
           transform: 'scale(0.8)',

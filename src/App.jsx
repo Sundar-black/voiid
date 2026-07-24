@@ -14,6 +14,7 @@ import Process from './components/Process';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import CustomCursor from './components/CustomCursor';
+import SpaceSaturnBackground from './components/SpaceSaturnBackground';
 
 function App() {
   const [navCompact, setNavCompact] = useState(false);
@@ -57,6 +58,7 @@ function App() {
 
   return (
     <>
+      <SpaceSaturnBackground />
       <CustomCursor />
 
       {/* Screen noise overlay */}

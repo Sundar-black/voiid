@@ -64,6 +64,8 @@ export default function Testimonials() {
         }}
       />
 
+
+
       <div className="section-header">
         <span className="section-tag">Validation</span>
         <h2 className="section-title">Client Verifications</h2>
